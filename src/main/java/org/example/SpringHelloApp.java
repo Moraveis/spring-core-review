@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.beans.CricketCoach;
+import org.example.implementation.CricketCoach;
 import org.example.interfaces.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

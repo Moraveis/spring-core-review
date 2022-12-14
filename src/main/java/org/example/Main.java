@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.beans.HappyFortuneService;
-import org.example.beans.TrackCoach;
+import org.example.implementation.HappyFortuneService;
+import org.example.implementation.TrackCoach;
 import org.example.interfaces.Coach;
 
 public class Main {

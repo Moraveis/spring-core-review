@@ -5,9 +5,9 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--     Define your beans here -->
-    <bean id="myFortuneService" class="org.example.beans.HappyFortuneService"/>
+    <bean id="myFortuneService" class="org.example.implementation.HappyFortuneService"/>
 
-    <bean id="coach" class="org.example.beans.TrackCoach" scope="prototype">
+    <bean id="coach" class="org.example.implementation.TrackCoach" scope="prototype">
         <constructor-arg ref="myFortuneService"/>
     </bean>
 

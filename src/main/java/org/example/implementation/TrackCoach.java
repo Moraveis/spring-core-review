@@ -1,4 +1,4 @@
-package org.example.beans;
+package org.example.implementation;
 
 import org.example.interfaces.Coach;
 import org.example.interfaces.FortuneService;

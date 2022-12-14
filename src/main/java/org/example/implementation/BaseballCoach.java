@@ -1,19 +1,19 @@
-package org.example.beans;
+package org.example.implementation;
 
 import org.example.interfaces.Coach;
 import org.example.interfaces.FortuneService;
 
-public class SoccerCoach implements Coach {
+public class BaseballCoach implements Coach {
 
     private final FortuneService fortuneService;
 
-    public SoccerCoach(FortuneService fortuneService) {
+    public BaseballCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Practice 100 kicks to goal.";
+        return "Spend 30 minutes on batting practice";
     }
 
     @Override
