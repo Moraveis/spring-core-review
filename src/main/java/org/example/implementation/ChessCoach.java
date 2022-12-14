@@ -6,18 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TennisCoach implements Coach {
-
-    private final FortuneService fortuneService;
+public class ChessCoach implements Coach {
 
     @Autowired
-    public TennisCoach(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
-    }
+    private FortuneService fortuneService;
 
     @Override
     public String getDailyWorkout() {
-        return "Practice your backhand volley";
+        return "Learn defensive strategies";
     }
 
     @Override
