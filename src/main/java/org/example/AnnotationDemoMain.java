@@ -19,10 +19,15 @@ public class AnnotationDemoMain {
         System.out.println(badmintonCoach.getDailyWorkout());
         System.out.println(badmintonCoach.getDailyFortune());
 
-        // Field Injection
+        // Field Injection + Qualifier
         Coach chessCoach = context.getBean("chessCoach", Coach.class);
         System.out.println(chessCoach.getDailyWorkout());
         System.out.println(chessCoach.getDailyFortune());
+
+        // Exercise
+        Coach actingCoach = context.getBean("actCoach", Coach.class);
+        System.out.println(actingCoach.getDailyWorkout());
+        System.out.println(actingCoach.getDailyFortune());
 
         context.close();
     }

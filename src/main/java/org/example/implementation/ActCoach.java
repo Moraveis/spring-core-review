@@ -7,15 +7,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ChessCoach implements Coach {
+public class ActCoach implements Coach {
 
     @Autowired
-    @Qualifier("randomFortuneService")
+    @Qualifier("scriptedFortuneService")
     private FortuneService fortuneService;
 
     @Override
     public String getDailyWorkout() {
-        return "Learn defensive strategies";
+        return "Practice memorization technics";
     }
 
     @Override

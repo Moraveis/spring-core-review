@@ -1,9 +1,11 @@
 package org.example.implementation;
 
 import org.example.interfaces.FortuneService;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+@Component
 public class RandomFortuneService implements FortuneService {
 
     private String[] fortunes = {"Bad lucky", "This is Fine", "Oh Yeah, you Rock!"};
