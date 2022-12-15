@@ -13,6 +13,10 @@ public class JavaConfigMain {
         System.out.println(actingCoach.getDailyWorkout());
         System.out.println(actingCoach.getDailyFortune());
 
+        Coach swimCoach = context.getBean("swimCoach", Coach.class);
+        System.out.println(swimCoach.getDailyWorkout());
+        System.out.println(swimCoach.getDailyFortune());
+
         context.close();
     }
 }
