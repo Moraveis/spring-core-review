@@ -3,10 +3,12 @@ package org.example.implementation;
 import org.example.interfaces.FortuneService;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -16,7 +18,9 @@ public class ScriptedFortuneService implements FortuneService {
 
     private List<String> fortunes = new ArrayList<>();
 
-    public ScriptedFortuneService() {
+    @PostConstruct
+    public void loadFortunesFromFile() {
+        System.out.println("ScriptedFortuneService:loadFortunesFromFile loading fortunes");
         ClassLoader classLoader = getClass().getClassLoader();
 
         File file = new File(classLoader.getResource("scripted-fortunes.txt").getFile());
